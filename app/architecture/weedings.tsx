@@ -20,11 +20,6 @@ export default function WeddingsPage() {
         image="/images/weddings/hero.jpg"
       />
 
-      <GalleryGrid
-        folder="weddings"
-        count={8}
-      />
-
       <GalleryCTA
         title="Your story deserves to be remembered."
         description="If you're planning your wedding and looking for natural, timeless photography, I'd love to hear your story."
