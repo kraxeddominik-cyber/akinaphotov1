@@ -5,14 +5,18 @@ import { motion } from "framer-motion";
 import Lightbox from "@/components/gallery/Lightbox";
 
 interface GalleryGridProps {
-  images: string[];
-  category: string;
+  folder: string;
+  count: number;
 }
 
 export default function GalleryGrid({
-  images,
-  category,
+  folder,
+  count,
 }: GalleryGridProps) {
+  // Automatyczne generowanie tablicy zdjęć na podstawie folderu i liczby (np. /images/weddings/1.jpg)
+  const images = Array.from({ length: count }, (_, index) => `/images/${folder}/${index + 1}.jpg`);
+  const category = folder;
+
   const [currentImage, setCurrentImage] =
     useState<number | null>(null);
 
