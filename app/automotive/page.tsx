@@ -20,7 +20,7 @@ export default function AutomotivePage() {
       <GalleryHero
         title="Automotive"
         subtitle="Speed. Design. Emotion."
-        image="/images/automotive/hero.jpg"
+        image="/images/automotive/hero.JPG"
       />
 
       <GalleryGrid

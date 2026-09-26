@@ -20,7 +20,7 @@ export default function MacroPage() {
       <GalleryHero
         title="Macro"
         subtitle="Tiny details. Extraordinary world."
-        image="/images/macro/hero.jpg"
+        image="/images/macro/hero.JPG"
       />
 
       <GalleryGrid

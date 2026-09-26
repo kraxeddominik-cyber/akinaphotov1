@@ -7,7 +7,7 @@ const portfolio = [
   {
     title: "Automotive",
     subtitle: "Speed • Design • Emotion",
-    image: "/images/automotive/1.jpg",
+    image: "/images/automotive/1.JPG",
     href: "/automotive",
   },
   {
