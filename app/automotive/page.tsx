@@ -13,8 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function AutomotivePage() {
-  const images =
-    getGalleryImages("automotive");
+  const images = getGalleryImages("automotive");
 
   return (
     <main className="bg-[#090909]">

@@ -13,8 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function MacroPage() {
-  const images =
-    getGalleryImages("macro");
+  const images = getGalleryImages("macro");
 
   return (
     <main className="bg-[#090909]">

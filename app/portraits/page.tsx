@@ -13,8 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function PortraitsPage() {
-  const images =
-    getGalleryImages("portraits");
+  const images = getGalleryImages("portraits");
 
   return (
     <main className="bg-[#090909]">
@@ -26,7 +25,7 @@ export default function PortraitsPage() {
 
       <GalleryGrid
         images={images}
-        category="Portrait"
+        category="Portraits"
       />
 
       <GalleryCTA

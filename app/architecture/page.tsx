@@ -13,8 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function ArchitecturePage() {
-  const images =
-    getGalleryImages("architecture");
+  const images = getGalleryImages("architecture");
 
   return (
     <main className="bg-[#090909]">

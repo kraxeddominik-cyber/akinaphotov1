@@ -5,20 +5,15 @@ import { motion } from "framer-motion";
 import Lightbox from "@/components/gallery/Lightbox";
 
 interface GalleryGridProps {
-  folder: string;
-  count: number;
+  images: string[];
+  category: string;
 }
 
 export default function GalleryGrid({
-  folder,
-  count,
+  images,
+  category,
 }: GalleryGridProps) {
-  // Automatyczne generowanie tablicy zdjęć na podstawie folderu i liczby (np. /images/weddings/1.jpg)
-  const images = Array.from({ length: count }, (_, index) => `/images/${folder}/${index + 1}.jpg`);
-  const category = folder;
-
-  const [currentImage, setCurrentImage] =
-    useState<number | null>(null);
+  const [currentImage, setCurrentImage] = useState<number | null>(null);
 
   const closeLightbox = useCallback(() => {
     setCurrentImage(null);
@@ -51,23 +46,11 @@ export default function GalleryGrid({
         className="bg-[#090909] px-5 py-24 md:px-8 md:py-32"
       >
         <div className="mx-auto max-w-[1500px]">
-
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.3,
-            }}
-            transition={{
-              duration: 0.8,
-            }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
             className="mb-16 text-center md:mb-24"
           >
             <p className="text-xs uppercase tracking-[0.5em] text-neutral-500">
@@ -87,38 +70,20 @@ export default function GalleryGrid({
                 <motion.button
                   key={image}
                   type="button"
-                  initial={{
-                    opacity: 0,
-                    y: 35,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.1,
-                  }}
+                  initial={{ opacity: 0, y: 35 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   transition={{
                     duration: 0.65,
-                    delay: Math.min(
-                      index * 0.04,
-                      0.3
-                    ),
+                    delay: Math.min(index * 0.04, 0.3),
                   }}
-                  onClick={() =>
-                    setCurrentImage(index)
-                  }
+                  onClick={() => setCurrentImage(index)}
                   className="group relative mb-5 block w-full break-inside-avoid cursor-zoom-in overflow-hidden bg-neutral-900 text-left"
-                  aria-label={`Open ${category} photograph ${
-                    index + 1
-                  }`}
+                  aria-label={`Open ${category} photograph ${index + 1}`}
                 >
                   <img
                     src={image}
-                    alt={`${category} photography ${
-                      index + 1
-                    }`}
+                    alt={`${category} photography ${index + 1}`}
                     loading="lazy"
                     className="block h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.035]"
                   />
@@ -136,7 +101,6 @@ export default function GalleryGrid({
               No photographs yet.
             </div>
           )}
-
         </div>
       </section>
 
