@@ -16,7 +16,7 @@ export default function GalleryHero({
   image,
 }: GalleryHeroProps) {
   return (
-    <section className="relative flex h-[100svh] items-center justify-center overflow-hidden px-4">
+    <section className="relative flex h-[100svh] items-center justify-center overflow-hidden px-6 sm:px-8">
 
       {/* Background */}
       <motion.div
@@ -46,13 +46,16 @@ export default function GalleryHero({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: .8 }}
           className="
-            text-4xl
+            w-full
+            max-w-full
+            text-3xl
             sm:text-5xl
             md:text-7xl
             lg:text-8xl
             font-light
             uppercase
-            tracking-[0.2em]
+            tracking-[0.12em]
+            sm:tracking-[0.2em]
             md:tracking-[0.35em]
             text-white
             whitespace-nowrap

@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black"
+      className="relative flex h-[100svh] items-center justify-center overflow-hidden bg-black px-6 sm:px-8"
     >
       {/* Background image + Ken Burns */}
       <motion.div
@@ -59,7 +59,7 @@ export default function Hero() {
       />
 
       {/* Main content */}
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 text-center">
+      <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function Hero() {
             duration: 0.8,
             delay: 0.2,
           }}
-          className="mb-6 text-[10px] uppercase tracking-[0.55em] text-white/60 sm:text-xs"
+          className="mb-4 sm:mb-6 text-[9px] sm:text-[10px] uppercase tracking-[0.4em] sm:tracking-[0.55em] text-white/60"
         >
           Photography Portfolio
         </motion.p>
@@ -89,13 +89,17 @@ export default function Hero() {
             ease: [0.22, 1, 0.36, 1],
           }}
           className="
-            text-5xl
+            w-full
+            max-w-full
+            text-3xl
+            sm:text-5xl
             font-light
-            tracking-[0.16em]
+            tracking-[0.1em]
+            sm:tracking-[0.16em]
             text-white
-            sm:text-6xl
             md:text-8xl
             lg:text-9xl
+            whitespace-nowrap
           "
         >
           AKINAPHOTO
@@ -108,7 +112,7 @@ export default function Hero() {
             duration: 1,
             delay: 1,
           }}
-          className="mx-auto mt-8 h-px bg-white/50"
+          className="mx-auto mt-6 sm:mt-8 h-px bg-white/50"
         />
 
         <motion.p
@@ -120,14 +124,18 @@ export default function Hero() {
           }}
           className="
             mx-auto
-            mt-8
+            mt-6
+            sm:mt-8
             max-w-xl
-            text-sm
+            px-2
+            text-xs
+            sm:text-sm
             font-light
-            leading-7
-            tracking-[0.08em]
+            leading-6
+            sm:leading-7
+            tracking-[0.06em]
+            sm:tracking-[0.08em]
             text-white/70
-            sm:text-base
           "
         >
           Capturing timeless stories through light, emotion and detail.
@@ -140,7 +148,7 @@ export default function Hero() {
             duration: 0.8,
             delay: 1.15,
           }}
-          className="mt-12"
+          className="mt-8 sm:mt-12"
         >
           <a
             href="#portfolio"
@@ -148,14 +156,18 @@ export default function Hero() {
               group
               inline-flex
               items-center
-              gap-5
+              gap-4
+              sm:gap-5
               border
               border-white/35
-              px-8
-              py-4
+              px-6
+              sm:px-8
+              py-3
+              sm:py-4
               text-[10px]
               uppercase
-              tracking-[0.4em]
+              tracking-[0.3em]
+              sm:tracking-[0.4em]
               text-white
               backdrop-blur-sm
               transition-all
@@ -186,27 +198,29 @@ export default function Hero() {
         }}
         className="
           absolute
-          bottom-8
+          bottom-6
+          sm:bottom-8
           left-1/2
           z-10
           flex
           -translate-x-1/2
           flex-col
           items-center
-          gap-4
+          gap-3
+          sm:gap-4
           text-white/50
           transition-colors
           duration-300
           hover:text-white
         "
       >
-        <span className="text-[9px] uppercase tracking-[0.45em]">
+        <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.35em] sm:tracking-[0.45em]">
           Scroll
         </span>
 
-        <div className="relative h-12 w-px overflow-hidden bg-white/20">
+        <div className="relative h-10 sm:h-12 w-px overflow-hidden bg-white/20">
           <motion.div
-            className="absolute left-0 top-0 h-5 w-px bg-white"
+            className="absolute left-0 top-0 h-4 sm:h-5 w-px bg-white"
             animate={{
               y: [-20, 48],
             }}
