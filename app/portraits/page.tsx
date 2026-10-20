@@ -18,8 +18,8 @@ export default function PortraitsPage() {
   return (
     <main className="bg-[#090909]">
       <GalleryHero
-        title="Portraits"
-        subtitle="Character. Emotion. Identity."
+        title="Characters"
+        subtitle="expression. Emotion. Identity."
         image="/images/portraits/hero.jpg"
       />
 
