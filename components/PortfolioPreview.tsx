@@ -24,7 +24,7 @@ const portfolio = [
   },
   {
     title: "Characters",
-    subtitle: "expression • Emotion • Identity",
+    subtitle: "Expression • Emotion • Identity",
     image: "/images/portraits/1.jpg",
     href: "/portraits",
   },
